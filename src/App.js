@@ -11,7 +11,6 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <Routes />
-
         <ToastContainer pauseOnFocusLoss={false} autoClose={3000} />
       </div>
     </Provider>

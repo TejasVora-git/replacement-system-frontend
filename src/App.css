@@ -12,7 +12,7 @@
   color: red;
 }
 #printableArea {
-  display: none;
+  opacity: 0;
 }
 .disable_button {
   display: none;
@@ -83,12 +83,12 @@ li p:hover,
 .date_width {
   width: 160px;
 }
-#printableArea {
+/* #printableArea {
   position: relative;
-}
+} */
 #print_button {
   position: absolute;
-  transform: translate(56px, -38px);
+  transform: translate(56px, -1021px);
 }
 .search_input {
   margin-right: 15px;
@@ -202,7 +202,7 @@ li p:hover,
 }
 /* ------------------ /loader ---------------- */
 
-@media print {
+/* @media print {
   @page {
     margin: 0;
   }
@@ -218,10 +218,7 @@ li p:hover,
     display: inline-block;
   }
 
-  #printableArea {
-    border-right: 1px solid black;
-    /* border-top: 1px solid black; */
-  }
+  
   .print_table {
     border: 1px solid black;
     width: 100%;
@@ -249,9 +246,7 @@ li p:hover,
     border-top: 1px solid black;
     position: relative;
   }
-  /* .print_incoiceDetails {
-    border-left: 1px solid black;
-  } */
+
   .print_productDetails,
   .print_productTitle,
   .print_subTotal,
@@ -320,4 +315,209 @@ li p:hover,
     border-top: 2px dotted black;
     margin: 10px 0;
   }
+} */
+
+/* -----------------------new print-----------------*/
+@media print {
+  @page {
+    margin: 0;
+  }
+  body {
+    margin: 1cm;
+  }
+
+  #printableArea {
+    opacity: 1;
+  }
+  #nonPrintableArea,
+  #print_button {
+    display: none;
+  }
+  .bold {
+    font-weight: 500;
+  }
+  .remove_p_sapce {
+    margin-bottom: 0;
+  }
+  .memo_part {
+    display: flex;
+
+    justify-content: space-between;
+  }
+  .address {
+    display: flex;
+  }
+  .icon {
+    width: 10%;
+  }
+  .address_part {
+    width: 90%;
+    text-align: center;
+  }
+  .address_title {
+    font-size: large;
+    font-weight: 600;
+  }
+  .time {
+    font-weight: 600;
+  }
+  .grid-container {
+    display: flex;
+    margin-top: 20px;
+  }
+  .parentFor_item2,
+  .parentFor_item5 {
+    width: 50%;
+    border: 1px solid black;
+  }
+  .parentFor_item2 {
+    border-right: 0;
+  }
+
+  .parentFor_item3 {
+    display: flex;
+  }
+
+  .item5 {
+    height: 45px;
+    text-align: left;
+    padding-left: 10px;
+  }
+  .item3 {
+    height: 100px;
+    width: 65%;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    text-align: left;
+    padding-left: 10px;
+  }
+  .item4 {
+    height: 100px;
+    width: 35%;
+    border-bottom: 1px solid black;
+    text-align: left;
+    padding-left: 10px;
+  }
+
+  .address {
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+
+  .address_content {
+    text-align: left;
+    margin-left: 30px;
+    word-wrap: break-word;
+  }
+  .product_info_container {
+    margin-top: 5px;
+  }
+  .product_info_header,
+  .product_info_body,
+  .product_info_footer {
+    display: flex;
+  }
+  .product_info_body p {
+    margin-left: 10px;
+  }
+  .srno {
+    width: 10%;
+    border: 1px solid black;
+    border-right: 0;
+  }
+  .disc {
+    width: 40%;
+    border: 1px solid black;
+    border-right: 0;
+  }
+  .qty {
+    width: 10%;
+    border: 1px solid black;
+    border-right: 0;
+  }
+  .units {
+    width: 10%;
+    border: 1px solid black;
+    border-right: 0;
+  }
+  .decleration {
+    width: 30%;
+    border: 1px solid black;
+    border-bottom: 0;
+  }
+  .product_info_body {
+    height: 200px;
+    text-align: left;
+  }
+
+  .srno_body {
+    width: 10%;
+    border: 1px solid black;
+    border-right: 0;
+    border-top: 0;
+  }
+  .disc_body {
+    width: 40%;
+    border: 1px solid black;
+    border-right: 0;
+    border-top: 0;
+  }
+  .qty_body {
+    width: 10%;
+    border: 1px solid black;
+    border-right: 0;
+    border-top: 0;
+  }
+  .units_body {
+    width: 10%;
+    border: 1px solid black;
+    border-top: 0;
+    border-right: 0;
+  }
+  .decleration_body {
+    width: 30%;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+  }
+
+  .srno_footer {
+    width: 10%;
+    border: 1px solid black;
+    border-right: 0;
+    border-top: 0;
+  }
+  .disc_footer {
+    width: 40%;
+    border: 1px solid black;
+    border-right: 0;
+    border-top: 0;
+    text-align: right;
+    padding-right: 10px;
+  }
+  .qty_footer {
+    width: 10%;
+    border: 1px solid black;
+    border-right: 0;
+    border-top: 0;
+    text-align: center;
+  }
+  .units_footer {
+    width: 10%;
+    border: 1px solid black;
+    border-top: 0;
+    border-right: 0;
+  }
+  .decleration_footer {
+    width: 30%;
+    border: 1px solid black;
+    border-top: 0;
+  }
+  .signatory {
+    margin-top: 80px;
+    text-align: right;
+    margin-right: 60px;
+  }
 }
+/* -----------------------/new print----------------- */
