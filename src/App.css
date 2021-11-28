@@ -90,6 +90,11 @@ li p:hover,
   position: absolute;
   transform: translate(56px, -1021px);
 }
+#print_button_outword {
+  position: absolute;
+  transform: translate(56px, -2078px);
+}
+
 .search_input {
   margin-right: 15px;
   padding: 4px;
@@ -339,10 +344,14 @@ li p:hover,
   .remove_p_sapce {
     margin-bottom: 0;
   }
-  .memo_part {
+
+  .heading {
     display: flex;
 
-    justify-content: space-between;
+    justify-content: space-evenly;
+  }
+  .memo_part {
+    text-align: end;
   }
   .address {
     display: flex;
@@ -409,6 +418,9 @@ li p:hover,
     text-align: left;
     margin-left: 30px;
     word-wrap: break-word;
+  }
+  .address_content p {
+    margin: 0;
   }
   .product_info_container {
     margin-top: 5px;
@@ -515,7 +527,7 @@ li p:hover,
     border-top: 0;
   }
   .signatory {
-    margin-top: 80px;
+    margin-top: 60px;
     text-align: right;
     margin-right: 60px;
   }
