@@ -35,7 +35,7 @@ const OutwordPrint = ({ data, productData }) => {
           <div class="grid-container">
             <div className="parentFor_item2">
               <div class="item2">
-                <div className="address"> To: </div>
+                <div className="address bold"> To: </div>
                 <div className="address_content">
                   <div>
                     <p className="print_bold_font">{data[0].customerName}</p>
@@ -60,16 +60,16 @@ const OutwordPrint = ({ data, productData }) => {
             <div className="parentFor_item5">
               <div className="parentFor_item3">
                 <div class="item3">
-                  Memo No:<span>{data[0].replacementId}</span>
+                  {/* Memo No:<span>{data[0].replacementId}</span> */}
                 </div>
-                <div class="item4">
+                <div class="item4 bold">
                   Date:
                   <div className="bold">{formateDate(new Date())}</div>
                 </div>
               </div>
-              <div class="item5">
+              <div class="item5 bold">
                 <p>
-                  Resived On:
+                  received On:
                   <span>{formateDate(data[0].inwardDate)}</span>
                 </p>
               </div>
@@ -125,7 +125,7 @@ const OutwordPrint = ({ data, productData }) => {
             </div>
             <div className="product_info_footer">
               <div className="srno_footer"></div>
-              <div className="disc_footer">Total</div>
+              <div className="disc_footer bold">Total</div>
               <div className="qty_footer">1</div>
               <div className="units_footer"></div>
               <div className="decleration_footer"></div>
@@ -136,11 +136,13 @@ const OutwordPrint = ({ data, productData }) => {
       )}
       {data.length != 0 && (
         <div id="printableArea">
-          -------------------------------------------------------------------------------------------------------------------------------------
+          <span className="bold">
+            -------------------------------------------------------------------------------------------------------------------------------
+          </span>
           <div class="grid-container">
             <div className="parentFor_item2">
               <div class="item2">
-                <div className="address"> To: </div>
+                <div className="address bold"> To: </div>
                 <div className="address_content">
                   <div>
                     <p className="print_bold_font">{data[0].customerName}</p>
@@ -165,16 +167,16 @@ const OutwordPrint = ({ data, productData }) => {
             <div className="parentFor_item5">
               <div className="parentFor_item3">
                 <div class="item3">
-                  Memo No:<span>{data[0].replacementId}</span>
+                  {/* Memo No:<span>{data[0].replacementId}</span> */}
                 </div>
-                <div class="item4">
+                <div class="item4 bold">
                   Date:
                   <div className="bold">{formateDate(new Date())}</div>
                 </div>
               </div>
-              <div class="item5">
+              <div class="item5 bold">
                 <p>
-                  Resived On: <span>{formateDate(data[0].inwardDate)}</span>
+                  received On: <span>{formateDate(data[0].inwardDate)}</span>
                 </p>
               </div>
             </div>
@@ -229,7 +231,7 @@ const OutwordPrint = ({ data, productData }) => {
             </div>
             <div className="product_info_footer">
               <div className="srno_footer"></div>
-              <div className="disc_footer">Total</div>
+              <div className="disc_footer bold">Total</div>
               <div className="qty_footer">1</div>
               <div className="units_footer"></div>
               <div className="decleration_footer"></div>

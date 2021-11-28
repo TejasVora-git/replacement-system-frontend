@@ -92,7 +92,7 @@ li p:hover,
 }
 #print_button_outword {
   position: absolute;
-  transform: translate(56px, -2078px);
+  transform: translate(56px, -2031px);
 }
 
 .search_input {
@@ -364,7 +364,7 @@ li p:hover,
     text-align: center;
   }
   .address_title {
-    font-size: large;
+    font-size: 22px;
     font-weight: 600;
   }
   .time {
@@ -372,12 +372,12 @@ li p:hover,
   }
   .grid-container {
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .parentFor_item2,
   .parentFor_item5 {
     width: 50%;
-    border: 1px solid black;
+    border: 2px solid black;
   }
   .parentFor_item2 {
     border-right: 0;
@@ -395,15 +395,15 @@ li p:hover,
   .item3 {
     height: 100px;
     width: 65%;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
     text-align: left;
     padding-left: 10px;
   }
   .item4 {
     height: 100px;
     width: 35%;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
     text-align: left;
     padding-left: 10px;
   }
@@ -435,27 +435,27 @@ li p:hover,
   }
   .srno {
     width: 10%;
-    border: 1px solid black;
+    border: 2px solid black;
     border-right: 0;
   }
   .disc {
     width: 40%;
-    border: 1px solid black;
+    border: 2px solid black;
     border-right: 0;
   }
   .qty {
     width: 10%;
-    border: 1px solid black;
+    border: 2px solid black;
     border-right: 0;
   }
   .units {
     width: 10%;
-    border: 1px solid black;
+    border: 2px solid black;
     border-right: 0;
   }
   .decleration {
     width: 30%;
-    border: 1px solid black;
+    border: 2px solid black;
     border-bottom: 0;
   }
   .product_info_body {
@@ -465,44 +465,45 @@ li p:hover,
 
   .srno_body {
     width: 10%;
-    border: 1px solid black;
+    border: 2px solid black;
     border-right: 0;
     border-top: 0;
   }
   .disc_body {
     width: 40%;
-    border: 1px solid black;
+    border: 2px solid black;
     border-right: 0;
     border-top: 0;
+    word-wrap: break-word;
   }
   .qty_body {
     width: 10%;
-    border: 1px solid black;
+    border: 2px solid black;
     border-right: 0;
     border-top: 0;
   }
   .units_body {
     width: 10%;
-    border: 1px solid black;
+    border: 2px solid black;
     border-top: 0;
     border-right: 0;
   }
   .decleration_body {
     width: 30%;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
   }
 
   .srno_footer {
     width: 10%;
-    border: 1px solid black;
+    border: 2px solid black;
     border-right: 0;
     border-top: 0;
   }
   .disc_footer {
     width: 40%;
-    border: 1px solid black;
+    border: 2px solid black;
     border-right: 0;
     border-top: 0;
     text-align: right;
@@ -510,20 +511,20 @@ li p:hover,
   }
   .qty_footer {
     width: 10%;
-    border: 1px solid black;
+    border: 2px solid black;
     border-right: 0;
     border-top: 0;
     text-align: center;
   }
   .units_footer {
     width: 10%;
-    border: 1px solid black;
+    border: 2px solid black;
     border-top: 0;
     border-right: 0;
   }
   .decleration_footer {
     width: 30%;
-    border: 1px solid black;
+    border: 2px solid black;
     border-top: 0;
   }
   .signatory {
