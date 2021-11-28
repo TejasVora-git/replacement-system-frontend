@@ -59,9 +59,7 @@ const OutwordPrint = ({ data, productData }) => {
             </div>
             <div className="parentFor_item5">
               <div className="parentFor_item3">
-                <div class="item3">
-                  {/* Memo No:<span>{data[0].replacementId}</span> */}
-                </div>
+                <div class="item3">Memo No:</div>
                 <div class="item4 bold">
                   Date:
                   <div className="bold">{formateDate(new Date())}</div>
@@ -69,7 +67,7 @@ const OutwordPrint = ({ data, productData }) => {
               </div>
               <div class="item5 bold">
                 <p>
-                  received On:
+                  Received On:
                   <span>{formateDate(data[0].inwardDate)}</span>
                 </p>
               </div>
@@ -166,9 +164,7 @@ const OutwordPrint = ({ data, productData }) => {
             </div>
             <div className="parentFor_item5">
               <div className="parentFor_item3">
-                <div class="item3">
-                  {/* Memo No:<span>{data[0].replacementId}</span> */}
-                </div>
+                <div class="item3">Memo No:</div>
                 <div class="item4 bold">
                   Date:
                   <div className="bold">{formateDate(new Date())}</div>
@@ -176,7 +172,7 @@ const OutwordPrint = ({ data, productData }) => {
               </div>
               <div class="item5 bold">
                 <p>
-                  received On: <span>{formateDate(data[0].inwardDate)}</span>
+                  Received On: <span>{formateDate(data[0].inwardDate)}</span>
                 </p>
               </div>
             </div>
