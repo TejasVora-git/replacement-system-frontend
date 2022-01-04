@@ -270,7 +270,7 @@ const CreateReplacementPartner = () => {
               </tbody>
             </table>
           )}
-          <div>
+          <div style={{ width: "50%", margin: "auto" }}>
             {Object.keys(printData).length != 0 && (
               <ReplacementAddressPrint
                 printData={printData}

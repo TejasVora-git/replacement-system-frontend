@@ -9,10 +9,7 @@ const ReplacementAddressPrint = ({ printData, setPrintData }) => {
     <>
       <div
         id="printableArea"
-        style={{
-          width: "350px",
-          border: "0 solid black",
-        }}
+        style={{ width: "350px", border: "0 solid black" }}
       >
         <div
           style={{
