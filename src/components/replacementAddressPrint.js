@@ -53,7 +53,7 @@ const ReplacementAddressPrint = ({ printData, setPrintData }) => {
               {printData.addressLine3},
             </div>
           )}
-          <div>{printData.city},</div>
+          <div>{printData.city}</div>
           <div>{printData.pincode}.</div>
         </div>
 
