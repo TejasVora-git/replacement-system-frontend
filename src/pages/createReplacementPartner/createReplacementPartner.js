@@ -198,7 +198,7 @@ const CreateReplacementPartner = () => {
                   {/* <th scope="col">AddressLine1</th>
                   <th scope="col">AddressLine2</th> */}
                   <th scope="col">City</th>
-                  <th scope="col">Pincode</th>
+                  {/* <th scope="col">Pincode</th> */}
                   <th scope="col">Contact Number</th>
                   <th scope="col">Actions</th>
                 </tr>
@@ -223,7 +223,7 @@ const CreateReplacementPartner = () => {
                       <td>{name}</td>
                       {/* <td>{addressLine1}</td>
                       <td>{addressLine2}</td> */}
-                      <td>{city}</td>
+                      {/* <td>{city}</td> */}
                       <td>{pincode}</td>
                       <td>{contactNumber}</td>
                       <td>
