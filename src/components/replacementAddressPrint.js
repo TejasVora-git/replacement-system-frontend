@@ -19,6 +19,7 @@ const ReplacementAddressPrint = ({ printData, setPrintData }) => {
             fontFamily: "Verdana",
             fontSize: 16,
             fontWeight: 900,
+            wordWrap: "break-word",
           }}
         >
           <div>
@@ -52,9 +53,8 @@ const ReplacementAddressPrint = ({ printData, setPrintData }) => {
               {printData.addressLine3},
             </div>
           )}
-          <div>
-            {printData.city} -{printData.pincode}.
-          </div>
+          <div>{printData.city},</div>
+          <div>{printData.pincode}.</div>
         </div>
 
         <div
@@ -71,7 +71,7 @@ const ReplacementAddressPrint = ({ printData, setPrintData }) => {
             marginLeft: "30px",
             marginBottom: "5px",
             fontFamily: "Calibri",
-            fontSize: 11,
+            fontSize: 13,
           }}
         >
           <div>

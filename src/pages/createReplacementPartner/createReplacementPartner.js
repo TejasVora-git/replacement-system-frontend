@@ -86,7 +86,7 @@ const CreateReplacementPartner = () => {
               <form onSubmit={handleSubmit(handleSubmitData)}>
                 <div>
                   <label className="col-sm-1" htmlFor="Partner Name">
-                    Partner Name :
+                    Name:
                   </label>
                   <input
                     type="text"
@@ -125,7 +125,7 @@ const CreateReplacementPartner = () => {
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="city">city : </label>
+                  <label htmlFor="city"> </label>
 
                   <input
                     type="text"
@@ -137,7 +137,7 @@ const CreateReplacementPartner = () => {
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="Pincode">Pincode : </label>
+                  <label htmlFor="Pincode">city : </label>
 
                   <input
                     type="text"
