@@ -39,12 +39,14 @@ const CreateItem = () => {
   };
 
   const deleteItem = (id) => {
-    FetchAPI("delete", DELETE_SPECIFIC_ITEM + id).then((res) => {
-      if (res.status == 200) {
-        dispatch(message({ message: res.data, type: "success" }));
-        getItemData();
-      }
-    });
+    if (window.confirm("Are you sure to delete this item?")) {
+      FetchAPI("delete", DELETE_SPECIFIC_ITEM + id).then((res) => {
+        if (res.status == 200) {
+          dispatch(message({ message: res.data, type: "success" }));
+          getItemData();
+        }
+      });
+    }
   };
 
   const handleSubmitData = (data) => {

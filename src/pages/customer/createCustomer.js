@@ -50,12 +50,14 @@ const CreateCustomer = () => {
   };
 
   const deleteItem = (id) => {
-    FetchAPI("delete", DELETE_SPECIFIC_CUSTOMER + id).then((res) => {
-      if (res.status == 200) {
-        dispatch(message({ message: res.data, type: "success" }));
-        getCustomerData();
-      }
-    });
+    if (window.confirm("Are you sure to delete this item?")) {
+      FetchAPI("delete", DELETE_SPECIFIC_CUSTOMER + id).then((res) => {
+        if (res.status == 200) {
+          dispatch(message({ message: res.data, type: "success" }));
+          getCustomerData();
+        }
+      });
+    }
   };
 
   return (
@@ -76,7 +78,7 @@ const CreateCustomer = () => {
                 </div>
               </div>
 
-              <div>
+              {/* <div>
                 <label htmlFor="addressLine1">Address : </label>
                 <input
                   type="text"
@@ -93,7 +95,7 @@ const CreateCustomer = () => {
                     {...register("addressLine2", { required: false })}
                   />
                 </div>
-              </div>
+              </div>*/}
               <div>
                 <label htmlFor="city">city : </label>
 
@@ -106,7 +108,7 @@ const CreateCustomer = () => {
                   {errors.city && <span>This field is required</span>}
                 </div>
               </div>
-              <div>
+              {/* <div>
                 <label htmlFor="Pincode">Pincode : </label>
 
                 <input
@@ -117,7 +119,7 @@ const CreateCustomer = () => {
                 <div className="error mt-2">
                   {errors.pincode && <span>This field is required</span>}
                 </div>
-              </div>
+              </div>  */}
               <div>
                 <label htmlFor="Contact Number">Contact Number : </label>
 
@@ -144,10 +146,10 @@ const CreateCustomer = () => {
                 <tr>
                   <th scope="col">Customer Id</th>
                   <th scope="col">Name</th>
-                  <th scope="col">AddressLine1</th>
+                  {/* <th scope="col">AddressLine1</th>
                   <th scope="col">AddressLine2</th>
+                  <th scope="col">Pincode</th> */}
                   <th scope="col">City</th>
-                  <th scope="col">Pincode</th>
                   <th scope="col">Contact Number</th>
                   <th scope="col">Actions</th>
                 </tr>
@@ -158,10 +160,10 @@ const CreateCustomer = () => {
                     {
                       customerId,
                       name,
-                      addressLine1,
-                      addressLine2,
+                      // addressLine1,
+                      // addressLine2,
+                      // pincode,
                       city,
-                      pincode,
                       contactNumber,
                     },
                     key
@@ -169,10 +171,10 @@ const CreateCustomer = () => {
                     <tr key={key}>
                       <th scope="row">{customerId}</th>
                       <td>{name}</td>
-                      <td>{addressLine1}</td>
+                      {/* <td>{addressLine1}</td>
                       <td>{addressLine2}</td>
+                      <td>{pincode}</td> */}
                       <td>{city}</td>
-                      <td>{pincode}</td>
                       <td>{contactNumber}</td>
                       <td>
                         <Link

@@ -17,13 +17,13 @@ const OutwordPrint = ({ data, productData }) => {
               />
             </div>
             <div>
-              <div className="memo_part">
+              {/* <div className="memo_part">
                 <span>SERVICE MEMO/</span>
                 <span>ORIGINAL MEMO</span>
-              </div>
+              </div> */}
 
               <div className="address_title">
-                K- NOX INFOTECH (REPLACEMENT/SERVICE memo)
+                K- NOX INFOTECH (REPLACEMENT CHALLAN)
               </div>
               <div className="address_area">RANDHANPURI BAZAR, BHAVNAGAR</div>
             </div>
@@ -40,15 +40,16 @@ const OutwordPrint = ({ data, productData }) => {
                   <div>
                     <p className="print_bold_font">{data[0].customerName}</p>
                   </div>
-                  <div>
+                  {/* <div>
                     <p>{data[0].customerAddressLine1}</p>
                   </div>
                   <div>
                     <p>{data[0].customerAddressLine2}</p>
-                  </div>
+                  </div> */}
                   <div>
                     <p>
-                      {data[0].customerCity} -{data[0].customerPincode}
+                      {data[0].customerCity}
+                      {/* -{data[0].customerPincode} */}
                     </p>
                   </div>
                   <div>
@@ -115,9 +116,9 @@ const OutwordPrint = ({ data, productData }) => {
                 </div>
                 <p>PRODUCT DELIVERED IN GOOD CONDITION</p>
                 <div>
-                  <p>TO :</p>
-                  <p>DATE :</p>
-                  <p>SIGN :</p>
+                  <div style={{ marginLeft: "5px" }}>TO :</div>
+                  <div style={{ marginLeft: "5px" }}>DATE :</div>
+                  <div style={{ marginLeft: "5px" }}>Authorized SIGN :</div>
                 </div>
               </div>
             </div>
@@ -129,7 +130,7 @@ const OutwordPrint = ({ data, productData }) => {
               <div className="decleration_footer"></div>
             </div>
           </div>
-          <div className="signatory "> Authorized Signatory </div>
+          {/* <div className="signatory "> Authorized Signatory </div> */}
         </div>
       )}
       {data.length != 0 && (
@@ -137,6 +138,28 @@ const OutwordPrint = ({ data, productData }) => {
           <span className="bold">
             -------------------------------------------------------------------------------------------------------------------------------
           </span>
+
+          <div className="heading">
+            <div className="icon">
+              <img
+                src={process.env.PUBLIC_URL + "/image.jpg"}
+                width="80px"
+                height="80px"
+                alt="image"
+              />
+            </div>
+            <div>
+              {/* <div className="memo_part">
+                <span>SERVICE MEMO/</span>
+                <span>ORIGINAL MEMO</span>
+              </div> */}
+
+              <div className="address_title">
+                K- NOX INFOTECH (REPLACEMENT CHALLAN)
+              </div>
+              <div className="address_area">RANDHANPURI BAZAR, BHAVNAGAR</div>
+            </div>
+          </div>
           <div class="grid-container">
             <div className="parentFor_item2">
               <div class="item2">
@@ -145,15 +168,16 @@ const OutwordPrint = ({ data, productData }) => {
                   <div>
                     <p className="print_bold_font">{data[0].customerName}</p>
                   </div>
-                  <div>
+                  {/* <div>
                     <p>{data[0].customerAddressLine1}</p>
                   </div>
                   <div>
                     <p>{data[0].customerAddressLine2}</p>
-                  </div>
+                  </div> */}
                   <div>
                     <p>
-                      {data[0].customerCity} -{data[0].customerPincode}
+                      {data[0].customerCity}
+                      {/* -{data[0].customerPincode} */}
                     </p>
                   </div>
                   <div>
@@ -219,9 +243,9 @@ const OutwordPrint = ({ data, productData }) => {
                 </div>
                 <p>PRODUCT DELIVERED IN GOOD CONDITION</p>
                 <div>
-                  <p>TO :</p>
-                  <p>DATE :</p>
-                  <p>SIGN :</p>
+                  <div style={{ marginLeft: "5px" }}>TO :</div>
+                  <div style={{ marginLeft: "5px" }}>DATE :</div>
+                  <div style={{ marginLeft: "5px" }}>Customer SIGN :</div>
                 </div>
               </div>
             </div>

@@ -43,12 +43,14 @@ const CreateReplacementPartner = () => {
   };
 
   const deleteItem = (id) => {
-    FetchAPI("delete", DELETE_SPECIFIC_PARTNER + id).then((res) => {
-      if (res.status == 200) {
-        dispatch(message({ message: res.data, type: "success" }));
-        getPartnerData();
-      }
-    });
+    if (window.confirm("Are you sure to delete this item?")) {
+      FetchAPI("delete", DELETE_SPECIFIC_PARTNER + id).then((res) => {
+        if (res.status == 200) {
+          dispatch(message({ message: res.data, type: "success" }));
+          getPartnerData();
+        }
+      });
+    }
   };
 
   const handleSubmitData = (data) => {
@@ -227,23 +229,6 @@ const CreateReplacementPartner = () => {
                       <td>{pincode}</td>
                       <td>{contactNumber}</td>
                       <td>
-                        <Link
-                          to={"/editreplacementpartner/" + replacementPartherId}
-                          className="mx-2"
-                        >
-                          <i className="fas fa-edit"></i>
-                        </Link>
-                        ||
-                        <span
-                          onClick={() => deleteItem(replacementPartherId)}
-                          className="mx-2 cursor_pointer"
-                        >
-                          <i
-                            className="far fa-trash-alt"
-                            style={{ color: "#0D6EFD" }}
-                          ></i>
-                        </span>
-                        ||
                         <span
                           className="mx-2 cursor_pointer"
                           onClick={() => {
@@ -260,6 +245,23 @@ const CreateReplacementPartner = () => {
                         >
                           <i
                             className="fas fa-print"
+                            style={{ color: "#0D6EFD" }}
+                          ></i>
+                        </span>
+                        ||
+                        <Link
+                          to={"/editreplacementpartner/" + replacementPartherId}
+                          className="mx-2"
+                        >
+                          <i className="fas fa-edit"></i>
+                        </Link>
+                        ||
+                        <span
+                          onClick={() => deleteItem(replacementPartherId)}
+                          className="mx-2 cursor_pointer"
+                        >
+                          <i
+                            className="far fa-trash-alt"
                             style={{ color: "#0D6EFD" }}
                           ></i>
                         </span>

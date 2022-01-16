@@ -27,10 +27,10 @@ const EditCustomer = () => {
       if (value.customerId == params.id) {
         setLoading(false);
         setValue("name", value.name);
-        setValue("addressLine1", value.addressLine1);
-        setValue("addressLine2", value.addressLine2);
+        // setValue("addressLine1", value.addressLine1);
+        // setValue("addressLine2", value.addressLine2);
+        // setValue("pincode", value.pincode);
         setValue("city", value.city);
-        setValue("pincode", value.pincode);
         setValue("contactNumber", value.contactNumber);
       }
     });
@@ -61,7 +61,7 @@ const EditCustomer = () => {
                   {errors.name && <span>This field is required</span>}
                 </div>
               </div>
-              <div>
+              {/* <div>
                 <label htmlFor="addressLine1">Address : </label>
                 <input
                   type="text"
@@ -78,7 +78,7 @@ const EditCustomer = () => {
                     {...register("addressLine2", { required: false })}
                   />
                 </div>
-              </div>
+              </div> */}
               <div>
                 <label htmlFor="city">city : </label>
 
@@ -91,7 +91,7 @@ const EditCustomer = () => {
                   {errors.city && <span>This field is required</span>}
                 </div>
               </div>
-              <div>
+              {/* <div>
                 <label htmlFor="Pincode">Pincode : </label>
 
                 <input
@@ -102,7 +102,7 @@ const EditCustomer = () => {
                 <div className="error mt-2">
                   {errors.pincode && <span>This field is required</span>}
                 </div>
-              </div>
+              </div> */}
               <div>
                 <label htmlFor="Contact Number">Contact Number : </label>
 
