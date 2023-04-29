@@ -31,13 +31,17 @@ const CreateReplacementPartner = () => {
   useEffect(() => {
     getPartnerData();
   }, []);
-  const getPartnerData = () => {
-    FetchAPI("get", GET_ALL_REPLACEMENT_PARTNER).then((res) => {
+  const getPartnerData = async () => {
+    await fetch(
+      "https://644ce7aacfdddac970988d28.mockapi.io/replacementpartners"
+    ).then(async (res) => {
+      console.log(res.body);
       if (res.status == 200) {
+        const data = await res.json();
         setLoading(false);
-        setPartners(res.data);
-        setMainData(res.data);
-        dispatch(getAllPartner(res.data));
+        setPartners(data);
+        setMainData(data);
+        // dispatch(getAllPartner(res.data));
       }
     });
   };
@@ -83,7 +87,7 @@ const CreateReplacementPartner = () => {
           <h3 className="mb-3 " id="nonPrintableArea">
             Create Replacement Partner
           </h3>
-          {searchValue == "" && (
+          {/* {searchValue == "" && (
             <div className="create_customer" id="nonPrintableArea">
               <form onSubmit={handleSubmit(handleSubmitData)}>
                 <div>
@@ -171,7 +175,7 @@ const CreateReplacementPartner = () => {
                 </div>
               </form>
             </div>
-          )}
+          )} */}
           <div className="search mt-2  " id="nonPrintableArea">
             <form class="form-inline">
               <div class="form-group mx-sm-3 mb-2">
@@ -248,8 +252,8 @@ const CreateReplacementPartner = () => {
                             style={{ color: "#0D6EFD" }}
                           ></i>
                         </span>
-                        ||
-                        <Link
+                        {/* ||
+                         <Link
                           to={"/editreplacementpartner/" + replacementPartherId}
                           className="mx-2"
                         >
@@ -264,7 +268,7 @@ const CreateReplacementPartner = () => {
                             className="far fa-trash-alt"
                             style={{ color: "#0D6EFD" }}
                           ></i>
-                        </span>
+                        </span> */}
                       </td>
                     </tr>
                   )

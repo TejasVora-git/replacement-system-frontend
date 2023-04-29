@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { message } from "../redux/actionFunction";
 import { FetchAPI } from "../api";
 import { useHistory } from "react-router-dom";
+import jwt from "jsonwebtoken";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -16,15 +17,34 @@ const Login = () => {
   } = useForm();
 
   const handleSubmitData = (data) => {
-    FetchAPI("post", LOGIN, data).then((res) => {
-      if (res.status == 200) {
-        dispatch(message({ message: res.data, type: "success" }));
-        localStorage.setItem("token", res.data.token);
-        history.push("/");
-      } else if (res.status == 500) {
-        dispatch(message({ message: res.data, type: "error" }));
-      }
-    });
+    console.log(data);
+    if (
+      data.email === "knoxinfotech@gmail.com" &&
+      data.password === "jinesh123"
+    ) {
+      const token = jwt.sign(
+        {
+          email: data.email,
+          role: "user",
+        },
+        "w*HOgdzC^b3Soq0NHLhiy30ZUOY*R#"
+      );
+      localStorage.setItem("token", token);
+      history.push("/createreplacementpartner#/createreplacementpartner");
+    } else {
+      dispatch(
+        message({ message: "Enter a valid Email And Password", type: "error" })
+      );
+    }
+    // FetchAPI("post", LOGIN, data).then((res) => {
+    //   if (res.status == 200) {
+    //     dispatch(message({ message: res.data, type: "success" }));
+    //     localStorage.setItem("token", res.data.token);
+    //     history.push("/");
+    //   } else if (res.status == 500) {
+    //     dispatch(message({ message: res.data, type: "error" }));
+    //   }
+    // });
   };
 
   return (

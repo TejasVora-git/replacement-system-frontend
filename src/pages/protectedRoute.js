@@ -6,7 +6,7 @@ function ProtectedRoute(props) {
   const token = localStorage.getItem("token");
 
   if (token != null) {
-    const decode = jwt.verify(token, "secretkey");
+    const decode = jwt.verify(token, "w*HOgdzC^b3Soq0NHLhiy30ZUOY*R#");
 
     if (decode.email != null && decode.iat != null) {
       return (

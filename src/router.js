@@ -22,7 +22,6 @@ import ProtectedRoute from "./pages/protectedRoute";
 
 const Routes = () => {
   const GlobalMessage = useSelector((state) => state.replacementSystem.message);
-
   useEffect(() => {
     if (GlobalMessage != undefined && GlobalMessage != "") {
       if (GlobalMessage.type == "success") {
@@ -30,7 +29,7 @@ const Routes = () => {
       } else if (GlobalMessage.type == "warning") {
         toast.warning(GlobalMessage.message.message);
       } else if (GlobalMessage.type == "error") {
-        toast.error(GlobalMessage.message.message);
+        toast.error(GlobalMessage.message);
       }
     }
   }, [GlobalMessage]);
