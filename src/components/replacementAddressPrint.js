@@ -9,7 +9,10 @@ const ReplacementAddressPrint = ({ printData, setPrintData }) => {
     <>
       <div
         id="printableArea"
-        style={{ width: "350px", border: "0 solid black" }}
+        style={{
+          width: "350px",
+          border: "0 solid black",
+        }}
       >
         <div
           style={{
@@ -20,6 +23,7 @@ const ReplacementAddressPrint = ({ printData, setPrintData }) => {
             fontSize: 16,
             fontWeight: 900,
             wordWrap: "break-word",
+            color: "#000",
           }}
         >
           <div>
@@ -72,6 +76,7 @@ const ReplacementAddressPrint = ({ printData, setPrintData }) => {
             marginBottom: "5px",
             fontFamily: "Calibri",
             fontSize: 13,
+            color: "#000",
           }}
         >
           <div>

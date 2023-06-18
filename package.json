@@ -23,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "start-p": "env-cmd -f .env.production react-scripts start",
-    "build": "env-cmd -f .env.production react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
